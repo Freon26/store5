@@ -1,23 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
-
-gem 'rails_12factor', group: :production
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
-#gem 'rails', '3.2.13'
+gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-
-group :production do
-  gem 'pg'
-end        
-
-group :development, :test do
-  gem 'sqlite3'
-end
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -32,8 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-#gem 'jquery-rails', '~> 2.0'
-gem 'jquery-rails' 
+gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -46,11 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'spree', '2.1.2'
-gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-1-stable'
-gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-1-stable'
-
-gem 'spree', '2.1.2'
+gem 'spree', github: 'spree/spree', :branch => '2-1-stable'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-1-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-1-stable'
 

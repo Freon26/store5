@@ -1,4 +1,56 @@
 GIT
+  remote: git://github.com/spree/spree.git
+  revision: cf0026650e3e007fb4ea92a41093eed3a1892033
+  branch: 2-1-stable
+  specs:
+    spree (2.1.4.beta)
+      spree_api (= 2.1.4.beta)
+      spree_backend (= 2.1.4.beta)
+      spree_cmd (= 2.1.4.beta)
+      spree_core (= 2.1.4.beta)
+      spree_frontend (= 2.1.4.beta)
+      spree_sample (= 2.1.4.beta)
+    spree_api (2.1.4.beta)
+      rabl (= 0.8.4)
+      spree_core (= 2.1.4.beta)
+      versioncake (~> 1.2.0)
+    spree_backend (2.1.4.beta)
+      jquery-rails (~> 3.0.0)
+      jquery-ui-rails (~> 4.0.0)
+      select2-rails (~> 3.4.7)
+      spree_api (= 2.1.4.beta)
+      spree_core (= 2.1.4.beta)
+    spree_cmd (2.1.4.beta)
+      thor (~> 0.14)
+    spree_core (2.1.4.beta)
+      activemerchant (= 1.42.2)
+      acts_as_list (= 0.2.0)
+      awesome_nested_set (~> 3.0.0.rc.2)
+      aws-sdk (= 1.27.0)
+      cancan (~> 1.6.10)
+      deface (~> 1.0.0)
+      ffaker (~> 1.16)
+      highline (~> 1.6.18)
+      httparty (~> 0.11)
+      json (~> 1.7)
+      kaminari (~> 0.15.0)
+      paperclip (~> 3.4.1)
+      paranoia (~> 2.0)
+      rails (~> 4.0.0)
+      ransack (= 1.1.0)
+      state_machine (= 1.2.0)
+      stringex (~> 1.5.1)
+      truncate_html (= 0.9.2)
+    spree_frontend (2.1.4.beta)
+      canonical-rails
+      jquery-rails (~> 3.0.0)
+      spree_api (= 2.1.4.beta)
+      spree_core (= 2.1.4.beta)
+      stringex (~> 1.5.1)
+    spree_sample (2.1.4.beta)
+      spree_core (= 2.1.4.beta)
+
+GIT
   remote: git://github.com/spree/spree_email_to_friend.git
   revision: be1df3479ff4e21ce125c47db1ca91a3fdbea952
   branch: 2-1-stable
@@ -9,7 +61,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_fancy.git
-  revision: 6a486b48cb5c18c30eaa6a86f5867c7cf7ce7085
+  revision: 5c41159c9c1422a85e99673c2c2b3132bad3f609
   branch: 2-1-stable
   specs:
     spree_fancy (2.1.0)
@@ -20,7 +72,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_reviews.git
-  revision: f1a3003391cca46c824eed8a7f36a41d38e713b7
+  revision: 65e0b3a0baae383f633de839a1d4bb7647a69658
   branch: 2-1-stable
   specs:
     spree_reviews (1.0.0)
@@ -42,7 +94,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_static_content.git
-  revision: ebf9f25bdefb07b5d0773ab7867faec01603bb46
+  revision: 5966c16c9ef17d8aafc9d599de453ca5df1273f0
   branch: 2-1-stable
   specs:
     spree_static_content (2.1.0.beta)
@@ -58,7 +110,7 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree_auth_devise.git
-  revision: 42204323be9e3eb4bd67c07d02dd77de6a6ac0d8
+  revision: 3a9e16834734b8f56ed515d75fe99d2dd5e79dd9
   branch: 2-1-stable
   specs:
     spree_auth_devise (2.1.0)
@@ -71,7 +123,7 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree_gateway.git
-  revision: c69f62a89fd971145a638d7c39c384a60059aa76
+  revision: 0f03d5860e0efb9dda41e30cc8b33fa6948dc6f2
   branch: 2-1-stable
   specs:
     spree_gateway (2.1.0.beta)
@@ -81,11 +133,11 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.0.0)
-      actionpack (= 4.0.0)
-      mail (~> 2.5.3)
-    actionpack (4.0.0)
-      activesupport (= 4.0.0)
+    actionmailer (4.0.1)
+      actionpack (= 4.0.1)
+      mail (~> 2.5.4)
+    actionpack (4.0.1)
+      activesupport (= 4.0.1)
       builder (~> 3.1.0)
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
@@ -93,24 +145,24 @@ GEM
     active_utils (2.0.1)
       activesupport (>= 2.3.11)
       i18n
-    activemerchant (1.39.2)
+    activemerchant (1.42.2)
       active_utils (~> 2.0, >= 2.0.1)
       activesupport (>= 2.3.14, < 5.0.0)
       builder (>= 2.1.2, < 4.0.0)
       i18n (~> 0.5)
       json (~> 1.7)
-      money (< 6.0.0)
+      money (< 7.0.0)
       nokogiri (~> 1.4)
-    activemodel (4.0.0)
-      activesupport (= 4.0.0)
+    activemodel (4.0.1)
+      activesupport (= 4.0.1)
       builder (~> 3.1.0)
-    activerecord (4.0.0)
-      activemodel (= 4.0.0)
+    activerecord (4.0.1)
+      activemodel (= 4.0.1)
       activerecord-deprecated_finders (~> 1.0.2)
-      activesupport (= 4.0.0)
+      activesupport (= 4.0.1)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
-    activesupport (4.0.0)
+    activesupport (4.0.1)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
       multi_json (~> 1.3)
@@ -125,7 +177,7 @@ GEM
     atomic (1.1.14)
     awesome_nested_set (3.0.0.rc.2)
       activerecord (~> 4.0.0)
-    aws-sdk (1.11.1)
+    aws-sdk (1.27.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
@@ -168,12 +220,12 @@ GEM
     execjs (2.0.2)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
-    ffaker (1.21.0)
+    ffaker (1.22.1)
     fssm (0.2.10)
     gyoku (0.4.6)
       builder (>= 2.1.2)
     hashie (2.0.5)
-    highline (1.6.18)
+    highline (1.6.20)
     hike (1.2.3)
     httparty (0.12.0)
       json (~> 1.8)
@@ -193,17 +245,17 @@ GEM
     json (1.8.1)
     jwt (0.1.8)
       multi_json (>= 1.5)
-    kaminari (0.14.1)
+    kaminari (0.15.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.25)
+    mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
-    money (5.1.1)
-      i18n (~> 0.6.0)
+    money (6.0.0)
+      i18n (~> 0.6.4)
     multi_json (1.8.2)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
@@ -249,7 +301,6 @@ GEM
       mime-types
     paranoia (2.0.1)
       activerecord (~> 4.0)
-    pg (0.17.0-x86-mingw32)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.3)
@@ -258,26 +309,21 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.0.0)
-      actionmailer (= 4.0.0)
-      actionpack (= 4.0.0)
-      activerecord (= 4.0.0)
-      activesupport (= 4.0.0)
+    rails (4.0.1)
+      actionmailer (= 4.0.1)
+      actionpack (= 4.0.1)
+      activerecord (= 4.0.1)
+      activesupport (= 4.0.1)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.0.0)
+      railties (= 4.0.1)
       sprockets-rails (~> 2.0.0)
-    rails_12factor (0.0.2)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.1)
-    rails_stdout_logging (0.0.3)
-    railties (4.0.0)
-      actionpack (= 4.0.0)
-      activesupport (= 4.0.0)
+    railties (4.0.1)
+      actionpack (= 4.0.1)
+      activesupport (= 4.0.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.0)
-    ransack (1.0.0)
+    ransack (1.1.0)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       polyamorous (~> 0.6.0)
@@ -303,55 +349,7 @@ GEM
     select2-rails (3.4.9)
       sass-rails
       thor (~> 0.14)
-    spree (2.1.2)
-      spree_api (= 2.1.2)
-      spree_backend (= 2.1.2)
-      spree_cmd (= 2.1.2)
-      spree_core (= 2.1.2)
-      spree_frontend (= 2.1.2)
-      spree_sample (= 2.1.2)
-    spree_api (2.1.2)
-      rabl (= 0.8.4)
-      spree_core (= 2.1.2)
-      versioncake (~> 1.2.0)
-    spree_backend (2.1.2)
-      deface (>= 0.9.0)
-      jquery-rails (~> 3.0.0)
-      jquery-ui-rails (~> 4.0.0)
-      select2-rails (~> 3.4.7)
-      spree_api (= 2.1.2)
-      spree_core (= 2.1.2)
-    spree_cmd (2.1.2)
-      thor (>= 0.14.6)
-    spree_core (2.1.2)
-      activemerchant (= 1.39.2)
-      acts_as_list (= 0.2.0)
-      awesome_nested_set (~> 3.0.0.rc.2)
-      aws-sdk (= 1.11.1)
-      cancan (~> 1.6.10)
-      deface (>= 1.0.0.rc3)
-      ffaker (~> 1.16)
-      highline (= 1.6.18)
-      httparty (~> 0.11)
-      json (>= 1.7.7)
-      kaminari (~> 0.14.1)
-      money (>= 5.1.1)
-      paperclip (~> 3.4.1)
-      paranoia (~> 2.0)
-      rails (~> 4.0.0)
-      ransack (= 1.0.0)
-      state_machine (= 1.2.0)
-      stringex (~> 1.5.1)
-      truncate_html (= 0.9.2)
-    spree_frontend (2.1.2)
-      canonical-rails
-      jquery-rails (~> 3.0.0)
-      spree_api (= 2.1.2)
-      spree_core (= 2.1.2)
-      stringex (~> 1.5.1)
-    spree_sample (2.1.2)
-      spree_core (= 2.1.2)
-    sprockets (2.10.0)
+    sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -396,12 +394,10 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
-  pg
-  rails (= 4.0.0)
-  rails_12factor
+  rails (= 4.0.1)
   sass-rails (~> 4.0.0)
   sdoc
-  spree (= 2.1.2)
+  spree!
   spree_auth_devise!
   spree_email_to_friend!
   spree_fancy!
