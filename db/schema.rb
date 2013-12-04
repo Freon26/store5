@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202090937) do
+ActiveRecord::Schema.define(version: 20131203002255) do
 
   create_table "spree_activators", force: true do |t|
     t.string   "description"
@@ -86,16 +86,6 @@ ActiveRecord::Schema.define(version: 20131202090937) do
 
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
-
-  create_table "spree_authentication_methods", force: true do |t|
-    t.string   "environment"
-    t.string   "provider"
-    t.string   "api_key"
-    t.string   "api_secret"
-    t.boolean  "active"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "spree_calculators", force: true do |t|
     t.string   "type"
@@ -687,14 +677,6 @@ ActiveRecord::Schema.define(version: 20131202090937) do
     t.datetime "updated_at"
   end
 
-  create_table "spree_user_authentications", force: true do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "spree_users", force: true do |t|
     t.string   "encrypted_password",     limit: 128
     t.string   "password_salt",          limit: 128
@@ -727,41 +709,21 @@ ActiveRecord::Schema.define(version: 20131202090937) do
   add_index "spree_users", ["spree_api_key"], name: "index_spree_users_on_spree_api_key"
 
   create_table "spree_variants", force: true do |t|
-    t.string   "sku",                                     default: "",    null: false
-    t.decimal  "weight",          precision: 8, scale: 2
-    t.decimal  "height",          precision: 8, scale: 2
-    t.decimal  "width",           precision: 8, scale: 2
-    t.decimal  "depth",           precision: 8, scale: 2
+    t.string   "sku",                                   default: "",    null: false
+    t.decimal  "weight",        precision: 8, scale: 2
+    t.decimal  "height",        precision: 8, scale: 2
+    t.decimal  "width",         precision: 8, scale: 2
+    t.decimal  "depth",         precision: 8, scale: 2
     t.datetime "deleted_at"
-    t.boolean  "is_master",                               default: false
+    t.boolean  "is_master",                             default: false
     t.integer  "product_id"
-    t.decimal  "cost_price",      precision: 8, scale: 2
+    t.decimal  "cost_price",    precision: 8, scale: 2
     t.integer  "position"
     t.string   "cost_currency"
-    t.boolean  "track_inventory",                         default: true
-    t.datetime "updated_at"
   end
 
   add_index "spree_variants", ["product_id"], name: "index_spree_variants_on_product_id"
   add_index "spree_variants", ["sku"], name: "index_spree_variants_on_sku"
-
-  create_table "spree_wished_products", force: true do |t|
-    t.integer  "variant_id"
-    t.integer  "wishlist_id"
-    t.text     "remark"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "spree_wishlists", force: true do |t|
-    t.integer  "user_id"
-    t.string   "name"
-    t.string   "access_hash"
-    t.boolean  "is_private",  default: true,  null: false
-    t.boolean  "is_default",  default: false, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "spree_zone_members", force: true do |t|
     t.integer  "zoneable_id"
